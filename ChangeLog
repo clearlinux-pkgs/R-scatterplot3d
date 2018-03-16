@@ -1,0 +1,79 @@
+Changes in 0.3-x releases of scatterplot3d:
+=======
+ 0.3.0:  New design: box, pretty() for ticks, ...
+ 0.3.1:  par("las") bug patched, scale.y is changed (code and default)
+ 0.3.2:  all angles will work again (default: 40)
+         tick mark labeling changed (using mtext)
+         par("mar") is set in the first line, not very general!
+ 0.3.3:  new argument "mar", more details in the help files
+ 0.3.4:  new arguments x/y/z.ticklabs, thanks to Ben Bolker!
+         bug fix: adj for tick.mark.labels corrected
+ 0.3-5:  new argument y.margin.add for manual fixing scaling problems
+         (e.g. some y-tickmarks dissapear after rescaling the window)
+ 0.3-6:  cex.symbols introduced to solve magnification errors
+ 0.3-7:  added function plane3d, which will be returned,
+         (e.g. for overlaying a regression plane)
+ 0.3-8:  bugfix: some magnification errors for y.ticklabs
+ 0.3-9:  bugfix: pch works vectorized again (error with y-sorting)
+ 0.3-10: added function box3d(), which will be returned,
+         to draw the box surrounding the plot again after additions
+         * added a function s3d.persp() - somehow joining s3d and persp() *
+ 0.3-11: * s3d.persp() deleted again, because of various reasons *
+         Created this file to reduce the size of the R code.
+ 0.3-12: bug fix: tick.mark.labels of y axis were sometimes raised
+         by a constant or vice versa
+         format() is used to print tick.mark.labels pretty, and smarter
+         calculation of desired (for y axis tick.mark.labels) plot margins
+ 0.3-13: typos in help file
+         box3d() refreshes the right lines for an arbitrary angle now.
+         calculation of space for tick.mark.labels fixed
+         (bug was introduced with 0.3-12 ?)
+         Extending s3d requires to set par(mar) to those settings
+          s3d was generated with, which will be done for points3d(),
+          plane3d(), and box3d() automatically.
+          A "Note" has been added to the help file.
+ 0.3-14: Reference changed in help file.
+         Suggestions by Martin Maechler (thank you!):
+         - clean up a lot of code
+         - Added note on unfixed bug to help file.
+     - Added Martin's great examples 6 a/b: "color cube"
+ 0.3-15: Allow for just 1 point (was 2 before) to be plotted
+         Allow all points to be within a major plane
+     Argument lty.hide introduced (for plotting of in-visible edges)
+     plane3d() allows to plot the box-intersecting lines in a
+          different line style
+ 0.3-16: bug fix: non-finite or NA values of y did not work.
+ 0.3-17: bug fix: Example 6 fixed by Martin Maechler
+ 0.3-18: bug fix: non-finite or NA values of y still did not work, if highlight.3d=TRUE
+ 0.3-19: CITATION file and package vignette added
+ 0.3-20: NAMESPACE added, translation support for warnings/erorrs added, srcltx.sty added
+ 0.3-21: chicago.* added
+ 0.3-22: bugfix: returned closures have to set par("usr") and par("mar") internally
+          as the former call to scatterplot3d did!
+ 0.3-23: bugfix: must not reset mar in scatterplot3d!
+ 0.3-24: par("type") does no longer exist for R >= 2.3.0
+         x.prty, y.prty, z.prty are no longer removed in the s3d environment (user request)
+ 0.3-25: bugfix: $ depreceated ...
+ 0.3-26: CITATION in UTF-8
+ 0.3-27: CITATION in latin1 and declaration to be latin1 package
+ 0.3-28: bugfix: y sorted revserse (and hence had also wrong tick labels) for angles > 180.
+ 0.3-29: bugfix: retunred function points3d()/xyz.convert()/plane3d can deal with angle > 180
+ 0.3-30: added argument lty.hplot for controllling horizontal line style, by Jari Oksanen
+ 0.3-31: fix cex.symbols reordering bug
+ 0.3-32: some qpdf compression in ./inst/doc
+ 0.3-34: argument bg was not re-odered with the points (reported by Travers Ching)
+         using proper vignettes directory
+ 0.3-35: arguments pch and bg caused failures when axes got restricted.
+	(reported by Hans-Joachim Pitz)
+ 0.3-36: import from base packages
+ 0.3-37: allow for solid (colored) 3d planes
+ 0.3-38: Fix Omegahat URL in the vignette, allow to visualize lm objects without intercept by s3d$plane3d()
+ 0.3-39: New asp argument (thanks for suggestions to Jari Oksanen)
+		 reset mar setting on.exit()
+		 bugfix for angle=90, angle=180
+ 0.3-40: revert: reset mar setting on.exit() from 0.3-39 as this introduced some bugs
+ 0.3-41: bugfix for tick.marks = FALSE option -> labels on right position for asp-argument
+         new contour3d function that allows for lm objects or functions which are non linear
+
+known UNfixed bug:
+ xlim, ylim, zlim don't work *exactly* for enlarged areas
