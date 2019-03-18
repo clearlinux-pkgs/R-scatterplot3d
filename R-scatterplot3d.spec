@@ -4,7 +4,7 @@
 #
 Name     : R-scatterplot3d
 Version  : 0.3.41
-Release  : 15
+Release  : 16
 URL      : https://cran.r-project.org/src/contrib/scatterplot3d_0.3-41.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/scatterplot3d_0.3-41.tar.gz
 Summary  : 3D Scatter Plot
@@ -23,10 +23,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552796473
+export SOURCE_DATE_EPOCH=1552938881
 
 %install
-export SOURCE_DATE_EPOCH=1552796473
+export SOURCE_DATE_EPOCH=1552938881
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
