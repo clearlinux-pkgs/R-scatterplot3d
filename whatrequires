@@ -1,8 +1,5 @@
 # This file contains recursive sources that require this package
 R-diffusionMap
-R-klaR
 R-lle
-R-misc3d
 R-phytools
 R-poLCA
-R-sandwich
