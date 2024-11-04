@@ -5,7 +5,7 @@
 #
 Name     : R-scatterplot3d
 Version  : 0.3.44
-Release  : 50
+Release  : 51
 URL      : https://cran.r-project.org/src/contrib/scatterplot3d_0.3-44.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/scatterplot3d_0.3-44.tar.gz
 Summary  : 3D Scatter Plot
